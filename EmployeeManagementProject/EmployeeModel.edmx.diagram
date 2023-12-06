@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5a7d5aca7e9943258ec86e8fca5dbaa0" Name="Diagram1">
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.BankDetail" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.BloodGroup" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.City" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.ContactDetail" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.Country" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.DepartmentMaster" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.LeaveStatusMaster" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.LoginTable" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.PersonalDetail" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.RoleMaster" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.StateMaster" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.Attendance" Width="1.5" PointX="7.375" PointY="8.75" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.ProjectStatusTable" Width="1.5" PointX="9.375" PointY="6.75" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.ProjectTable" Width="1.5" PointX="9.375" PointY="9.75" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.TaskTable" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.SalaryTable" Width="1.5" PointX="11.375" PointY="5.75" />
+        <EntityTypeShape EntityType="EmployeeDataBaseModel.LeaveTable" Width="1.5" PointX="5.375" PointY="11.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
