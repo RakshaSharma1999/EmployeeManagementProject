@@ -8,9 +8,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                   
-                    <!-- /.col -->
-                   
-                    <!-- /.col -->
+                 
                 </div>
                 <!-- /.row -->
             </div>

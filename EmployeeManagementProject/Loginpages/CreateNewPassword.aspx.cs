@@ -100,6 +100,7 @@ namespace EmployeeManagementProject.Loginpages
                         ).ToList();
                     lblCode.Text = result[0];
                     SendMailNew(txtemailid.Text, txtemailid.Text, lblCode.Text, Fullname);
+                    
                     EmailVerifyPanel.Visible = false;
                     VerifyCodePanel.Visible = true;
                 }
@@ -121,6 +122,10 @@ namespace EmployeeManagementProject.Loginpages
                 EmailVerifyPanel.Visible = false;
                 VerifyCodePanel.Visible = false;
                 CreatePasswordPanel.Visible = true;
+            }
+            else
+            {
+                lblMsg.Text = "Code Is Not Correct Please Check Your Email Account";
             }
         }
 

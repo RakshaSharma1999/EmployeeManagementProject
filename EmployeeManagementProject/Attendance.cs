@@ -20,5 +20,6 @@ namespace EmployeeManagementProject
         public Nullable<System.TimeSpan> CheckInTime { get; set; }
         public Nullable<System.TimeSpan> CheckOutTime { get; set; }
         public Nullable<bool> IsActive { get; set; }
+        public string AttendanceStatus { get; set; }
     }
 }

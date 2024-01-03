@@ -150,15 +150,7 @@ namespace EmployeeManagementProject.AdminPanelPages
 
         protected void GridViewLeaveRequest_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            if(e.Row.RowType == DataControlRowType.DataRow)
-            {
-                Label lblStatus = (Label)e.Row.FindControl("lblStatus");
-                if(lblStatus.Text == "Pending") { 
-               e.Row.BackColor=System.Drawing.Color.Red;
-                    e.Row.ForeColor=System.Drawing.Color.White;
-                    
-                }
-            }
+           
         }
     }
 }

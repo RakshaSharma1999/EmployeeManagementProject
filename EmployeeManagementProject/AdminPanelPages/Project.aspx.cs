@@ -42,7 +42,7 @@ namespace EmployeeManagementProject.AdminPanelPages
             if(Result > 0)
             {
                 string message = "Project Details has been submited Succesfully";
-                string url = "Project.aspx";
+                string url = "Home.aspx";
 
                 ObjG.ShowMessageAndRedirect(this, message, url);
             }

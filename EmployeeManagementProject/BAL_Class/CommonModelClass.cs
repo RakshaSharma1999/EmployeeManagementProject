@@ -106,4 +106,19 @@ namespace EmployeeManagementProject.BAL_Class
         public bool Status { get; set; }
         public string Message { get; set; }
     }
+
+    public class AttendanceModelList
+    {
+        public int ID { get; set; }
+        public int DateID { get; set; }
+        public int CheckInID { get; set; }
+        public int CheckOutID { get; set; }
+        public int RowNumber { get; set; }
+        public int AttendanceId { get; set; }
+        public Nullable<int> EmployeeId { get; set; }
+        public DateTime Attendancedate { get; set; }
+        public Nullable<System.TimeSpan> CheckInTime { get; set; }
+        public Nullable<System.TimeSpan> CheckOutTime { get; set; }
+        public Nullable<bool> IsActive { get; set; }
+    }
 }

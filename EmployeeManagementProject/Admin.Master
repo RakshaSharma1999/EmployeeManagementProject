@@ -33,10 +33,15 @@
     </ul>
 
     <!-- Right navbar links -->
-   
+   <ul class="navbar-nav ml-auto">
+
+  <li class="nav-item">
+          <asp:Button ID="btnLogout" runat="server" class="btn btn-block btn-secondary btn-lg"  Text="LogOut" OnClick="btnLogout_Click" />
+    
+  </li>
+</ul>
       
       
-          <asp:Button ID="btnLogout" runat="server" class="btn btn-default"  Text="LogOut" OnClick="btnLogout_Click" />
 
      
      

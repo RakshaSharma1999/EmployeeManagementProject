@@ -166,6 +166,7 @@ namespace EmployeeManagementProject.AdminPanelPages
 
             var Bind = (from d in db.DepartmentMasters
                         where d.IsActive == true
+                        orderby d.DepartMentId descending
                         select d).ToList();
             if (Bind != null)
             {

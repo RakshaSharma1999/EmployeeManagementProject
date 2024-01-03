@@ -44,10 +44,12 @@ namespace EmployeeManagementProject.EmployeeDashboard
                         join PD in db.PersonalDetails on T.EmployeeId equals PD.EmployeeId
                         join PS in db.ProjectStatusTables on T.StatusId equals PS.StatusId
                         where T.IsActive == true && T.EmployeeId == UserID
+                        orderby T.TaskId descending
                         select new
                         {
                             T.TaskId,
                             T.EmployeeId,
+                            T.TaskName,
                             PT.ProjectName,
                             PD.FirstName,
                             PD.LastName,
@@ -86,6 +88,7 @@ namespace EmployeeManagementProject.EmployeeDashboard
                             {
                                 T.StatusId,
                                 T.TaskId,
+                                T.TaskName,
                                 T.EmployeeId,
                                 PT.ProjectName,
                                 PD.FirstName,
@@ -100,6 +103,7 @@ namespace EmployeeManagementProject.EmployeeDashboard
                 lblEmployeeId.Text = View.EmployeeId.ToString();
                 lblEmployeeName.Text = View.FirstName + " " + View.LastName;
                 lblProjectName.Text = View.ProjectName;
+                lblTaskName.Text = View.TaskName;
                 lblStartDate.Text = Convert.ToDateTime(View.StartDate).ToString("dd-MM-yyyy");
                 lblEndDate.Text = Convert.ToDateTime(View.EndDate).ToString("dd-MM-yyyy");
                 lblDescription.Text = View.Details;

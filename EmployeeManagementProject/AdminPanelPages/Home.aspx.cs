@@ -24,7 +24,9 @@ namespace EmployeeManagementProject.AdminPanelPages
         public void TotalEmployee()
         {
             db=new EmployeeDataBaseEntities();
-            var Total=(from P in db.PersonalDetails where P.IsActive==true
+            var Total=(from P in db.PersonalDetails join C in db.ContactDetails
+                       on P.EmployeeId equals C.EmployeeId
+                       where P.IsActive==true && C.IsActive==true
                        select P.EmployeeId).Count();
             lblTotalEmployee.Text = Total.ToString();
         }

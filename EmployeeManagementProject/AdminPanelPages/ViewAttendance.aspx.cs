@@ -141,6 +141,7 @@ namespace EmployeeManagementProject.AdminPanelPages
                         join
                       P in db.PersonalDetails on A.EmployeeId equals P.EmployeeId
                         where A.IsActive == true
+                        orderby A.AttendanceId descending
                         select new
                         {
                             A.EmployeeId,

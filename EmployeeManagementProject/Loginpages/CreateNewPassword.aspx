@@ -54,7 +54,7 @@
       
       <asp:Panel ID="VerifyCodePanel" Visible="false" runat="server">
     <div class="card-body">
-      <p class="login-box-msg">Enter Your Email ID</p>
+      <p class="login-box-msg">Please Check Your Email Account For Verification Code</p>
       
     <form id="Form1" runat="server">
         <div class="input-group mb-3">
@@ -102,7 +102,7 @@
         </div>
         <asp:CompareValidator ID="CompareValidator1" runat="server" 
                         ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword" 
-                        ErrorMessage="Both pass r diff." SetFocusOnError="True"></asp:CompareValidator>
+                        ErrorMessage=" Password and Confirm Password Both are Different." ForeColor="Red" SetFocusOnError="True"></asp:CompareValidator>
         <div class="row">
           <div class="col-12">
     <asp:Button ID="btnCreatePassword" class="btn btn-primary btn-block" runat="server" Text="Create" OnClick="btnCreatePassword_Click" />

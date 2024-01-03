@@ -49,6 +49,7 @@ namespace EmployeeManagementProject.AdminPanelPages
             {
                 EmployeeId = Convert.ToInt32(txtEmployeeId.Text),
                 ProjectId = Convert.ToInt32(ddlProjectName.SelectedValue),
+                TaskName = txtTaskName.Text,
                 StatusId= Convert.ToInt32(ddlStatus.SelectedValue),
                 StartDate=Convert.ToDateTime(txtStartDate.Text),
                 EndDate=Convert.ToDateTime(txtEndDate.Text),
@@ -174,6 +175,7 @@ namespace EmployeeManagementProject.AdminPanelPages
                             {
                                 T.TaskId,
                                 T.EmployeeId,
+                                T.TaskName,
                                 PT.ProjectName,
                                 PD.FirstName,
                                 PD.LastName,
@@ -186,6 +188,7 @@ namespace EmployeeManagementProject.AdminPanelPages
                 lblEmployeeId.Text=View.EmployeeId.ToString();
                 lblEmployeeName.Text=View.FirstName + " " + View.LastName;
                 lblProjectName.Text=View.ProjectName;
+                lblTaskName.Text=View.TaskName;
                 lblStartDate.Text=Convert.ToDateTime(View.StartDate).ToString("yyyy-MM-dd");
                 lblEndDate.Text=Convert.ToDateTime(View.EndDate).ToString("yyyy-MM-dd");
                 lblStatus.Text=View.StatusName;
@@ -200,6 +203,7 @@ namespace EmployeeManagementProject.AdminPanelPages
                 var Edit=(from T in db.TaskTables
                           where T.TaskId== TaskID select T).FirstOrDefault();
                 txtEmployeeId.Text= Edit.EmployeeId.ToString();
+                txtTaskName.Text = Edit.TaskName;
                 txtStartDate.Text= Convert.ToDateTime(Edit.StartDate).ToString("yyyy-MM-dd");
                 txtEndDate.Text = Convert.ToDateTime(Edit.EndDate).ToString("yyyy-MM-dd");
                 txtDescription.Text = Edit.Details;
@@ -224,9 +228,11 @@ namespace EmployeeManagementProject.AdminPanelPages
                       join PD in db.PersonalDetails on T.EmployeeId equals PD.EmployeeId
                       join PS in db.ProjectStatusTables on T.StatusId equals PS.StatusId
                       where T.IsActive == true
+                      orderby T.TaskId descending
                       select new {
                           T.TaskId,
                       T.EmployeeId,
+                      T.TaskName,
                       PT.ProjectName,
                       PD.FirstName, PD.LastName,
                       PS.StatusName,T.StartDate, T.EndDate

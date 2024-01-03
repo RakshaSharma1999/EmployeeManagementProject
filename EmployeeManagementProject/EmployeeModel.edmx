@@ -14,6 +14,7 @@
           <Property Name="Attendancedate" Type="datetime" />
           <Property Name="CheckInTime" Type="time" Precision="7" />
           <Property Name="CheckOutTime" Type="time" Precision="7" />
+          <Property Name="AttendanceStatus" Type="nvarchar" MaxLength="50" />
           <Property Name="IsActive" Type="bit" />
         </EntityType>
         <EntityType Name="BankDetails">
@@ -216,6 +217,7 @@
           <Property Name="TaskId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProjectId" Type="int" />
           <Property Name="EmployeeId" Type="int" />
+          <Property Name="TaskName" Type="nvarchar" MaxLength="300" />
           <Property Name="StartDate" Type="date" />
           <Property Name="EndDate" Type="date" />
           <Property Name="Details" Type="nvarchar(max)" />
@@ -442,6 +444,7 @@
           <Property Name="CheckInTime" Type="Time" Precision="7" />
           <Property Name="CheckOutTime" Type="Time" Precision="7" />
           <Property Name="IsActive" Type="Boolean" />
+          <Property Name="AttendanceStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ProjectStatusTable">
           <Key>
@@ -483,6 +486,7 @@
           <Property Name="CreateOn" Type="DateTime" Precision="3" />
           <Property Name="UpdateBy" Type="Int32" />
           <Property Name="UpdateOn" Type="DateTime" Precision="3" />
+          <Property Name="TaskName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="SalaryTable">
           <Key>
@@ -694,6 +698,7 @@
           <EntitySetMapping Name="Attendances">
             <EntityTypeMapping TypeName="EmployeeDataBaseModel.Attendance">
               <MappingFragment StoreEntitySet="Attendance">
+                <ScalarProperty Name="AttendanceStatus" ColumnName="AttendanceStatus" />
                 <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="CheckOutTime" ColumnName="CheckOutTime" />
                 <ScalarProperty Name="CheckInTime" ColumnName="CheckInTime" />
@@ -732,6 +737,7 @@
           <EntitySetMapping Name="TaskTables">
             <EntityTypeMapping TypeName="EmployeeDataBaseModel.TaskTable">
               <MappingFragment StoreEntitySet="TaskTable">
+                <ScalarProperty Name="TaskName" ColumnName="TaskName" />
                 <ScalarProperty Name="UpdateOn" ColumnName="UpdateOn" />
                 <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
                 <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />

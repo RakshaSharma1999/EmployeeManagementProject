@@ -26,5 +26,6 @@ namespace EmployeeManagementProject
         public Nullable<System.DateTime> CreateOn { get; set; }
         public Nullable<int> UpdateBy { get; set; }
         public Nullable<System.DateTime> UpdateOn { get; set; }
+        public string TaskName { get; set; }
     }
 }

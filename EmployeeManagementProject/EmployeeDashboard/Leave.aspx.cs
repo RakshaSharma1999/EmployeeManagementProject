@@ -103,6 +103,7 @@ namespace EmployeeManagementProject.EmployeeDashboard
             var Bind = (from L in db.LeaveTables
                         join S in db.LeaveStatusMasters on L.StatusId equals S.LeaveStatusId
                         where L.IsActive == true && L.EmployeeId== UserID
+                        orderby L.LeaveRequestId descending
                         select new
                         {
                             L.LeaveStartDate,

@@ -346,6 +346,7 @@ namespace EmployeeManagementProject.AdminPanelPages
             var Bind=(from S in db.SalaryTables
                       join P in db.PersonalDetails on S.EmployeeId equals P.EmployeeId
                       where S.IsActive == true
+                      orderby S.SalaryId descending
                       select new
                       {
                           P.EmployeeId,P.FirstName,P.LastName,

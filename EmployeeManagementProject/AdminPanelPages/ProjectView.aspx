@@ -9,14 +9,7 @@
                 <div class="row mb-2">
                     <div class="col-sm-6">
                     </div>
-                    <!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">EmployeeView</li>
-                        </ol>
-                    </div>
-                    <!-- /.col -->
+                   
                 </div>
                 <!-- /.row -->
             </div>
@@ -45,11 +38,11 @@
                                     <div class="form-group row">
 
                                         <div class="col-sm-3">
-                                            <asp:TextBox ID="txtSearch" TextMode="Search" runat="server" class="form-control" placeholder="Search"></asp:TextBox>
+                                            <asp:TextBox ID="txtSearch" TextMode="Search" runat="server" class="form-control" placeholder="Search ProjectName / Status"></asp:TextBox>
                                         </div>
 
                                         <div class="col-sm-1">
-                                            <asp:Button ID="btnSearch" class="btn btn-block bg-gradient-info" runat="server" placeholder="Search ProjectName / Status" OnClick="btnSearch_Click" />
+                                            <asp:Button ID="btnSearch" class="btn btn-block bg-gradient-info" runat="server" Text="Search" OnClick="btnSearch_Click" />
                                         </div>
                                         <div class="col-sm-1">
                                             <asp:Button ID="btnClear" class="btn btn-block bg-gradient-success" runat="server" Text="Clear" OnClick="btnClear_Click" />

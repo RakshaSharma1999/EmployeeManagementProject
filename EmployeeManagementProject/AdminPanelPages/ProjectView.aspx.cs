@@ -138,7 +138,9 @@ namespace EmployeeManagementProject.AdminPanelPages
             db = new EmployeeDataBaseEntities();
             var Bind=(from P in db.ProjectTables join
                       S in db.ProjectStatusTables on P.StatusId equals S.StatusId
-                      where P.IsActive == true select new
+                      where P.IsActive == true
+                      orderby P.ProjectId descending
+                      select new
                       {
                           P.ProjectName,P.ProjectId,
                           P.StartDate, P.EndDate,

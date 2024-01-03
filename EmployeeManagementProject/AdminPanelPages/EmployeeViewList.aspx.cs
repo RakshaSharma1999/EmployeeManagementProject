@@ -170,7 +170,8 @@ namespace EmployeeManagementProject.AdminPanelPages
                            join C in db.ContactDetails on P.EmployeeId equals C.EmployeeId
                            join S in db.StateMasters on C.StateId equals S.StateId
                            join city in db.Cities on C.CityId equals city.ID
-                           where P.IsActive == true
+                           where P.IsActive == true 
+                           orderby P.EmployeeId descending
                            select new
                            {
                                P.EmployeeId,
